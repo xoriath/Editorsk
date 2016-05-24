@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
-    <Metadata>
-        <Identity Id="a3112f81-e423-4f88-9f2c-e089a309e48e" Version="1.0" Language="en-US" Publisher="Mads Kristensen" />
-        <DisplayName>Editor Enhancements</DisplayName>
-        <Description xml:space="preserve">Provides additional features such as HTML and URL encodings, transformations and sorting of selected text the editor.</Description>
-        <MoreInfo>https://github.com/madskristensen/Editorsk</MoreInfo>
-        <License>Resources\LICENSE</License>
-        <Icon>Resources\Icon.png</Icon>
-        <PreviewImage>Resources\preview.png</PreviewImage>
-        <Tags>editor, strings, lines, encoding</Tags>
-    </Metadata>
-    <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="14.0" />
-        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="15.0" />
-    </Installation>
-    <Dependencies>
-        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
-        <Dependency Id="Microsoft.VisualStudio.MPF.14.0" DisplayName="Visual Studio MPF 14.0" d:Source="Installed" Version="[14.0]" />
-    </Dependencies>
-    <Assets>
-        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
-    </Assets>
-</PackageManifest>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="a3112f81-e423-4f88-9f2c-e089a309e48e">
+    <Name>Editor Enhancements</Name>
+    <Author>Mads Kristensen</Author>
+    <Version>1.0.18</Version>
+    <Description xml:space="preserve">Provides additional features such as HTML and URL encodings, transformations and sorting of selected text the editor.</Description>
+    <Locale>1033</Locale>
+    <MoreInfoUrl>https://github.com/madskristensen/Editorsk</MoreInfoUrl>
+	<License>Resources\LICENSE</License>
+    <Icon>Resources\Icon.png</Icon>
+    <PreviewImage>Resources\preview.png</PreviewImage>
+    <GettingStartedGuide>https://github.com/xoriath/Editorsk/tree/atmel-studio-7.0</GettingStartedGuide>
+    <InstalledByMsi>false</InstalledByMsi>
+    <SupportedProducts>
+      <IsolatedShell Version="7.0">AtmelStudio</IsolatedShell>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
+  </Identifier>
+  <References>
+  </References>
+  <Content>
+    <VsPackage>Editorsk.pkgdef</VsPackage>
+  </Content>
+</Vsix>
